@@ -4,7 +4,7 @@
 # (i) m is present,
 # (ii) the denominators are distinct,
 # (iii) there are at most 39 denominators,
-# (iv) the sum 1/n_1 + .. + 1/n_t is equal to 1/6, so that 1 = 1/2 + 1/3 + 1/n_1 + .. + 1/n_t
+# (iv) the sum 1/n_1 + .. + 1/n_t is equal to 1/6, so that 1 = 1/2 + 1/3 + 1/n_1 + .. + 1/n_t.
 
 import sys
 import re
@@ -53,3 +53,4 @@ def main():
 if __name__ == "__main__":
 
     main()
+
