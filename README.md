@@ -1,10 +1,15 @@
-# Smallest-missing-denominator-data
-Data for the paper 'The smallest denominator not contained in a unit fraction decomposition of 1 with fixed length' that was jointly written by Quanyu Tang and me.
+# Smallest missing denominator data
 
-For all integers m between 2 and 432 (inclusive) we need distinct positive integers n_1, .., n_t with t ≤ 41 such that 1/n_1 + .. + 1/n_t = 1 and m occurs as one of the n_i. For 2 ≤ m ≤ 6 one can use either 1 = 1/2 + 1/3 + 1/6 or 1 = 1/2 + 1/4 + 1/5 + 1/20, so we may assume that m ≥ 7. For all these m we then actually write 1 = 1/2 + 1/3 + 1/n_1 + .. + 1/n_t with the n_i chosen in a greedy manner such that one of the n_i is equal to m. The denominators we then obtain can be found in the document cert.txt. Each line in that list has the format
+In this repository one can find certificates for certain unit fraction decompositions of $1$, and Python code to verify these decompositions.
 
-m='integer' : n1 n2 ... nt
+More precisely, for every integer $2 \leq m \leq 432$ we exhibit pairwise distinct positive integers $n_1,\dots,n_t$ with $t \leq 41$ such that $1=\frac1{n_1}+\cdots+\frac1{n_t}$, and where $m$ occurs as one of the denominators.
 
-and represents the claim that m is one of the n_i, that all the n_i are pairwise distinct, that t ≤ 39, and that 1/2 + 1/3 + 1/n_1 + .. + 1/n_t = 1.  One may verify all lines using exact rational arithmetic.
+For $2 \leq m \leq 6$ one may use either $1=\frac12+\frac13+\frac16$ or $1=\frac12+\frac14+\frac15+\frac1{20}$, so it suffices to treat $m \geq 7$. For these $m$ we write $1=\frac12+\frac13+\frac1{n_1}+\cdots+\frac1{n_t}$, where the $n_i$ are pairwise distinct, one of them equals $m$, and $t \le 39$ (so that the total number of terms is at most $41$). 
 
-For completeness, we included a short Python3 script verify.py; it parses the list and checks, for every m between 7 and 432, that the corresponding list satisfies the required conditions.
+The certificates are listed in cert.txt. Each line has the format
+
+m=<integer> : n1 n2 ... nt
+
+such that $m$ is one of the $n_i$, the $n_i$ are all distinct, $t \le 39$, and $\frac1{n_1}+\cdots+\frac1{n_t}=\frac16$ (so that $\frac12+\frac13+\frac1{n_1}+\cdots+\frac1{n_t} = 1$).
+
+For completeness, we include a short Python 3 script verify.py which parses cert.txt and checks, for every $7 \leq m \leq 432$, that the corresponding line satisfies the required conditions using exact rational arithmetic.
