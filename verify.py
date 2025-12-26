@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
-# Verify the certificates listed in Appendix A (for 7<=m<=432).
-# It checks: (i) m is present, (ii) denominators are distinct,
-# (iii) sum_{d in E_m} 1/d = 1/6 (so 1 = 1/2 + 1/3 + sum_{d in E_m} 1/d).
+# Verify the certificates for m between 7 and 432.
+# It checks that: 
+# (i) m is present,
+# (ii) the denominators are distinct,
+# (iii) there are at most 39 denominators,
+# (iv) the sum 1/n_1 + .. + 1/n_t is equal to 1/6, so that 1 = 1/2 + 1/3 + 1/n_1 + .. + 1/n_t
 
 import sys
 import re
@@ -48,4 +51,5 @@ def main():
     print("All certificates verified for 7<=m<=432.")
 
 if __name__ == "__main__":
+
     main()
