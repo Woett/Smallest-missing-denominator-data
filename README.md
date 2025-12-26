@@ -1,7 +1,7 @@
 # Smallest-missing-denominator-data
 Data for the paper 'The smallest denominator not contained in a unit fraction decomposition of 1 with fixed length' that was jointly written by Quanyu Tang and me.
 
-For all integers m between 2 and 432 (inclusive) we need distinct positive integers n_1, .., n_t with t ≤ 41 such that 1/n_1 + .. + 1/n_t = 1 and m occurs as one of the n_i. For m smaller than or equal to 7 one can use either 1 = 1/2 + 1/3 + 1/6 or 1 = 1/2 + 1/4 + 1/5 + 1/20, so we may assume that m ≥ 7. For all these m we then actually write 1 = 1/2 + 1/3 + 1/n_1 + .. + 1/n_t with the n_i chosen in a greedy manner such that one of the n_i is equal to m (and with t ≤ 39). The denominators we then obtain can be found in the other document. Each line in that list has the format
+For all integers m between 2 and 432 (inclusive) we need distinct positive integers n_1, .., n_t with t ≤ 41 such that 1/n_1 + .. + 1/n_t = 1 and m occurs as one of the n_i. For m < 7 one can use either 1 = 1/2 + 1/3 + 1/6 or 1 = 1/2 + 1/4 + 1/5 + 1/20, so we may assume that m ≥ 7. For all these m we then actually write 1 = 1/2 + 1/3 + 1/n_1 + .. + 1/n_t with the n_i chosen in a greedy manner such that one of the n_i is equal to m (and with t ≤ 39). The denominators we then obtain can be found in the other document. Each line in that list has the format
 
 m=<integer> : n1 n2 ... nt
 
@@ -9,6 +9,7 @@ and represents the claim that m is one of the n_i, that all the n_i are pairwise
 
 For completeness, we include a short Python3 script below; it parses the list and checks, for every m between 7 and 432, that the corresponding list satisfies the above conditions.
 
+```python
 #!/usr/bin/env python3
 # Verify the listed certificates.
 # It checks that: 
@@ -63,6 +64,6 @@ def main():
 
 if __name__ == "__main__":
     main()
-\end{lstlisting}
+```
 
 To run the verifier on the list in this appendix, first copy the lines 'm=7 : ...' through 'm=432 : ...' into a plain text file named cert.txt. Each certificate for a fixed m must appear on a single line in the input file. In particular, long integers should not be broken across lines; otherwise the parser will fail. Then place cert.txt in the same directory as verify.py and execute python3 verify.py.
