@@ -7,4 +7,4 @@ m='integer' : n1 n2 ... nt
 
 and represents the claim that m is one of the n_i, that all the n_i are pairwise distinct, that t ≤ 39, and that 1/2 + 1/3 + 1/n_1 + .. + 1/n_t = 1.  One may verify all lines using exact rational arithmetic.
 
-For completeness, we included a short Python3 script vrify.py; it parses the list and checks, for every m between 7 and 432, that the corresponding list satisfies the required conditions.
+For completeness, we included a short Python3 script verify.py; it parses the list and checks, for every m between 7 and 432, that the corresponding list satisfies the required conditions.
