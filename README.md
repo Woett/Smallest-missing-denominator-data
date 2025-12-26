@@ -12,4 +12,4 @@ m=<integer> : n1 n2 ... nt
 
 such that $m$ is one of the $n_i$, the $n_i$ are all distinct, $t \le 39$, and $\frac1{n_1}+\cdots+\frac1{n_t}=\frac16$ (so that $\frac12+\frac13+\frac1{n_1}+\cdots+\frac1{n_t} = 1$).
 
-For completeness, we include a short Python 3 script verify.py which parses cert.txt and checks, for every $7 \leq m \leq 432$, that the corresponding line satisfies the required conditions using exact rational arithmetic.
+For completeness, we include a short Python 3 script verify.py which parses cert.txt and checks, for every $7 \leq m \leq 432$, that the corresponding line satisfies the required conditions using exact rational arithmetic. To run this code yourself, download both cert.txt and verify.py to your desktop, open verify.py and run it.
