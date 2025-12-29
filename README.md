@@ -1,6 +1,6 @@
 # Smallest missing denominator data
 
-In this repository one can find certificates for certain unit fraction decompositions of $1$, and Python code to verify these decompositions.
+In this repository one can find certificates for certain unit fraction decompositions of $1$, and Python code to verify these decompositions. These data and certificates are used in our paper: <a href="https://arxiv.org/abs/2512.22083">arXiv:2512.22083</a>.
 
 More precisely, for every integer $2 \leq m \leq 432$ we exhibit pairwise distinct positive integers $n_1,\dots,n_t$ with $t \leq 41$ such that $1=\frac1{n_1}+\cdots+\frac1{n_t}$, and where $m$ occurs as one of the denominators.
 
